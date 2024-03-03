@@ -10,7 +10,7 @@ app.set("view engine", )
 
 app.get("/", (req, res) => {
   res.send("hello from yelp camp")
-})
+}) 
 
 // // Middleware for JSON parsing
 // app.use(express.json());
