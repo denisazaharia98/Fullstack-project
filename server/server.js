@@ -1,15 +1,8 @@
-const express = require('express');
-const app = express();
+const express = require("express")
+const app = express()
 
-require('@babel/register');s
+app.get("/api", (req, res) => {
+    res.json({"users": ["userOne", "userTwo", "userThree", "userFour"]})
+})
 
-const PORT = process.env.PORT || 3000;
-
-app.get("/", (req, res) => {
-  res.send("hello from server")
-}) 
-
-// Start server
-app.listen(3000, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(5000, () => {console.log("server started at port 5000")})
